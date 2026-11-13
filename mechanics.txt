@@ -1,0 +1,33 @@
+# Menu 
+	Location:
+		Middle of screen
+	Tabs:
+		Abilities:
+			Abilities that u can drag on wheel
+			Quirk name
+			Skill wheel
+			Stats
+		Skill Tree:
+
+		Settings:
+			Abilities layout:
+				Circle
+			
+# Skill Selector
+	Circle:
+		keybinds:
+			z = scroll left
+			S + z = scroll right
+			` = toggle skill selector
+			x = use skill
+		position: 
+			bottom left of screen
+		size: 
+			X,Y
+
+#Structures:
+	Hospital:
+		Loot:
+			
+
+		
