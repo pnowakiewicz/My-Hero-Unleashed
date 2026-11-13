@@ -17,6 +17,38 @@
           }
         ]
       }
+    },
+    {
+      "name": "SetQuirk",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_quirk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/myherounleashed/command/SetQuirkCommand.java"
+        ]
+      },
+      "path": "~/Quirks/QuirkSystem"
+    },
+    {
+      "name": "GetQuirk",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_quirk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/myherounleashed/procedures/GetQuirkProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Quirks/QuirkSystem"
     }
   ],
   "variable_elements": [
