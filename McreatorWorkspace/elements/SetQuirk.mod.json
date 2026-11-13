@@ -4,7 +4,7 @@
   "definition": {
     "commandName": "SetQuirk",
     "type": "STANDARD",
-    "permissionLevel": "4",
+    "permissionLevel": "2",
     "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>"
   }
 }

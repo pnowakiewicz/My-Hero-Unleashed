@@ -1,0 +1,9 @@
+{
+  "_fv": 73,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "NONE",
+    "keyBindingName": "Use Ability Key",
+    "keyBindingCategoryKey": "misc"
+  }
+}

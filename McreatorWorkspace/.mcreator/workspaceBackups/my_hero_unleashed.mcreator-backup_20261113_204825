@@ -1,0 +1,217 @@
+{
+  "mod_elements": [
+    {
+      "name": "OnJoin",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "on_join",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/myherounleashed/procedures/OnJoinProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Core"
+    },
+    {
+      "name": "SetQuirk",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_quirk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/myherounleashed/command/SetQuirkCommand.java"
+        ]
+      },
+      "path": "~/Quirks/QuirkSystem"
+    },
+    {
+      "name": "SetQuirkProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_quirk_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/myherounleashed/procedures/SetQuirkProcedureProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Quirks/QuirkSystem"
+    },
+    {
+      "name": "RollRandomQuirk",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "roll_random_quirk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/myherounleashed/procedures/RollRandomQuirkProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Quirks/QuirkSystem"
+    },
+    {
+      "name": "CooldownHandler",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldown_handler",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/myherounleashed/procedures/CooldownHandlerProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Abilities/AbilityExecution"
+    },
+    {
+      "name": "UseAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/myherounleashed/procedures/UseAbilityProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Abilities/AbilityExecution"
+    },
+    {
+      "name": "UseAbilityKey",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_ability_key",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/myherounleashed/network/UseAbilityKeyMessage.java"
+        ]
+      },
+      "path": "~/Abilities/AbilityExecution"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "PlayerQuirk",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "OnFirstJoin",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "SelectedAbility",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "AbilityCooldown",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Stamina",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "key.my_hero_unleashed.use_ability_key": "Use Ability Key"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Menu",
+        "children": [
+          {
+            "name": "Settings",
+            "children": []
+          },
+          {
+            "name": "SkillTree",
+            "children": []
+          },
+          {
+            "name": "Abilities",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Quirks",
+        "children": [
+          {
+            "name": "QuirkSystem",
+            "children": []
+          },
+          {
+            "name": "QuirkList",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Abilities",
+        "children": [
+          {
+            "name": "AbilityCircle",
+            "children": []
+          },
+          {
+            "name": "AbilityLinebar",
+            "children": []
+          },
+          {
+            "name": "AbilityExecution",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Core",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "my_hero_unleashed",
+    "modName": "My Hero: Unleashed",
+    "version": "1.0.0",
+    "author": "pnowakiewicz, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "modElementsPackage": "net.mcreator.myherounleashed"
+  },
+  "mcreatorVersion": 202400452410
+}

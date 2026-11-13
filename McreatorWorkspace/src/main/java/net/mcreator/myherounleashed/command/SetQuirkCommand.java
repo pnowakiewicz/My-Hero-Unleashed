@@ -13,7 +13,7 @@ import net.minecraft.commands.Commands;
 public class SetQuirkCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("SetQuirk").requires(s -> s.hasPermission(4))
+		event.getDispatcher().register(Commands.literal("SetQuirk").requires(s -> s.hasPermission(2))
 
 		);
 	}

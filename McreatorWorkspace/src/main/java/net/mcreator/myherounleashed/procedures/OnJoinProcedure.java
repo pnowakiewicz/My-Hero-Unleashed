@@ -5,9 +5,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
 import net.mcreator.myherounleashed.network.MyHeroUnleashedModVariables;
 
@@ -27,15 +28,20 @@ public class OnJoinProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(MyHeroUnleashedModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MyHeroUnleashedModVariables.PlayerVariables())).Game_Start != false) {
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("Test"), false);
+		if (!(entity.getCapability(MyHeroUnleashedModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MyHeroUnleashedModVariables.PlayerVariables())).OnFirstJoin) {
 			{
-				boolean _setval = false;
+				boolean _setval = true;
 				entity.getCapability(MyHeroUnleashedModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Game_Start = _setval;
+					capability.OnFirstJoin = _setval;
 					capability.syncPlayerVariables(entity);
 				});
+			}
+			{
+				Entity _ent = entity;
+				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "setquirk @s random");
+				}
 			}
 		}
 	}

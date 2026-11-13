@@ -122,6 +122,8 @@ Adding Libraries to Inheritance
 Reading Input: /home/pnowakiewicz/Projects/mhamod/McreatorWorkspace/build/libs/modid-1.0.jar
 Adding input to inheritance map
 Processing entries
+Conflicting propagated mapping for net/mcreator/myherounleashed/network/MyHeroUnleashedModVariables$WorldVariables/save(Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag; from net/minecraft/world/level/saveddata/SavedData/save(Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;: save -> m_7176_
+Conflicting propagated mapping for net/mcreator/myherounleashed/network/MyHeroUnleashedModVariables$MapVariables/save(Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag; from net/minecraft/world/level/saveddata/SavedData/save(Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;: save -> m_7176_
 Conflicting propagated mapping for net/minecraft/world/entity/LivingEntity/lambda$addAdditionalSaveData$3(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V from net/minecraft/world/entity/player/Player/lambda$addAdditionalSaveData$3(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V: lambda$addAdditionalSaveData$3 -> m_219754_
 Conflicting propagated mapping for net/minecraftforge/common/util/FakePlayer/isInvulnerableTo(Lnet/minecraft/world/damagesource/DamageSource;)Z from net/minecraft/server/level/ServerPlayer/isInvulnerableTo(Lnet/minecraft/world/damagesource/DamageSource;)Z: isInvulnerableTo -> m_6673_
 Conflicting propagated mapping for net/minecraftforge/common/util/FakePlayer/canHarmPlayer(Lnet/minecraft/world/entity/player/Player;)Z from net/minecraft/server/level/ServerPlayer/canHarmPlayer(Lnet/minecraft/world/entity/player/Player;)Z: canHarmPlayer -> m_7099_
@@ -145,13 +147,26 @@ Writing Output: /home/pnowakiewicz/Projects/mhamod/McreatorWorkspace/build/reobf
   net/mcreator/
   net/mcreator/myherounleashed/
   net/mcreator/myherounleashed/MyHeroUnleashedMod.class
+  net/mcreator/myherounleashed/command/
+  net/mcreator/myherounleashed/command/SetQuirkCommand.class
+  net/mcreator/myherounleashed/init/
+  net/mcreator/myherounleashed/init/MyHeroUnleashedModKeyMappings$KeyEventListener.class
+  net/mcreator/myherounleashed/init/MyHeroUnleashedModKeyMappings.class
   net/mcreator/myherounleashed/network/
   net/mcreator/myherounleashed/network/MyHeroUnleashedModVariables$1.class
   net/mcreator/myherounleashed/network/MyHeroUnleashedModVariables$EventBusVariableHandlers.class
+  net/mcreator/myherounleashed/network/MyHeroUnleashedModVariables$MapVariables.class
   net/mcreator/myherounleashed/network/MyHeroUnleashedModVariables$PlayerVariables.class
   net/mcreator/myherounleashed/network/MyHeroUnleashedModVariables$PlayerVariablesProvider.class
   net/mcreator/myherounleashed/network/MyHeroUnleashedModVariables$PlayerVariablesSyncMessage.class
+  net/mcreator/myherounleashed/network/MyHeroUnleashedModVariables$SavedDataSyncMessage.class
+  net/mcreator/myherounleashed/network/MyHeroUnleashedModVariables$WorldVariables.class
   net/mcreator/myherounleashed/network/MyHeroUnleashedModVariables.class
+  net/mcreator/myherounleashed/network/UseAbilityKeyMessage.class
   net/mcreator/myherounleashed/procedures/
+  net/mcreator/myherounleashed/procedures/CooldownHandlerProcedure.class
   net/mcreator/myherounleashed/procedures/OnJoinProcedure.class
+  net/mcreator/myherounleashed/procedures/RollRandomQuirkProcedure.class
+  net/mcreator/myherounleashed/procedures/SetQuirkProcedureProcedure.class
+  net/mcreator/myherounleashed/procedures/UseAbilityProcedure.class
   pack.mcmeta

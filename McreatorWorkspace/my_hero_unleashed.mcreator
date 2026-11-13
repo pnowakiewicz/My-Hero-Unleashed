@@ -4,7 +4,7 @@
       "name": "OnJoin",
       "type": "procedure",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "on_join",
       "metadata": {
         "files": [
@@ -16,7 +16,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Core"
     },
     {
       "name": "SetQuirk",
@@ -32,14 +33,28 @@
       "path": "~/Quirks/QuirkSystem"
     },
     {
-      "name": "GetQuirk",
+      "name": "SetQuirkProcedure",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "get_quirk",
+      "registry_name": "set_quirk_procedure",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/myherounleashed/procedures/GetQuirkProcedure.java"
+          "src/main/java/net/mcreator/myherounleashed/procedures/SetQuirkProcedureProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Quirks/QuirkSystem"
+    },
+    {
+      "name": "RollRandomQuirk",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "roll_random_quirk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/myherounleashed/procedures/RollRandomQuirkProcedure.java"
         ],
         "dependencies": [
           {
@@ -49,21 +64,88 @@
         ]
       },
       "path": "~/Quirks/QuirkSystem"
+    },
+    {
+      "name": "CooldownHandler",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldown_handler",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/myherounleashed/procedures/CooldownHandlerProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Abilities/AbilityExecution"
+    },
+    {
+      "name": "UseAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/myherounleashed/procedures/UseAbilityProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Abilities/AbilityExecution"
+    },
+    {
+      "name": "UseAbilityKey",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_ability_key",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/myherounleashed/network/UseAbilityKeyMessage.java"
+        ]
+      },
+      "path": "~/Abilities/AbilityExecution"
     }
   ],
   "variable_elements": [
     {
-      "name": "Game_Start",
+      "name": "PlayerQuirk",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "OnFirstJoin",
       "type": "logic",
       "scope": "player_persistent",
-      "value": "true"
+      "value": "false"
+    },
+    {
+      "name": "SelectedAbility",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "AbilityCooldown",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Stamina",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "key.my_hero_unleashed.use_ability_key": "Use Ability Key"
+    }
   },
   "foldersRoot": {
     "name": "~",
@@ -91,6 +173,10 @@
           {
             "name": "QuirkSystem",
             "children": []
+          },
+          {
+            "name": "QuirkList",
+            "children": []
           }
         ]
       },
@@ -104,8 +190,16 @@
           {
             "name": "AbilityLinebar",
             "children": []
+          },
+          {
+            "name": "AbilityExecution",
+            "children": []
           }
         ]
+      },
+      {
+        "name": "Core",
+        "children": []
       }
     ]
   },
